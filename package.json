@@ -1,0 +1,31 @@
+{
+  "name": "theme-shadow-vscode",
+  "displayName": "Theme Shadow",
+  "description": "Don't look to escape from darkness, learn to live there.",
+  "version": "0.0.1",
+  "publisher": "sangamcse",
+  "engines": {
+    "vscode": "1.41.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Theme Shadow",
+        "uiTheme": "vs-dark",
+        "path": "./themes/shadow-color-theme.json"
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/clean-slate-lint",
+      "pre-rewrite": "./node_modules/.bin/clean-slate-lint"
+    }
+  },
+  "devDependencies": {
+    "clean-slate-lint": "1.0.9"
+  }
+}
