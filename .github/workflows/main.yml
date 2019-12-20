@@ -1,0 +1,19 @@
+name: Theme Shadow CI
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Install Dependencies
+      run: yarn install
+    - name: VSCode Release
+      env:
+        PUBLISHER_TOKEN: ${{ secrets.PUBLISH_KEY }}
+      run: yarn vs:deploy -p $PUBLISHER_TOKEN

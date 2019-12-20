@@ -2,11 +2,22 @@
   "name": "theme-shadow-vscode",
   "displayName": "Theme Shadow",
   "description": "Don't look to escape from darkness, learn to live there.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "sangamcse",
   "engines": {
     "vscode": "1.41.0"
   },
+  "scripts": {
+    "vs:pack": "vsce package --yarn",
+    "vs:publish": "vsce publish --yarn",
+    "vs:deploy": "yarn vs:rm && yarn vs:pack && yarn vs:publish",
+    "vs:rm": "rimraf **.vsix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sangamcse/theme-shadow-vscode.git"
+  },
+  "license": "MIT",
   "categories": [
     "Themes"
   ],
@@ -26,6 +37,16 @@
     }
   },
   "devDependencies": {
-    "clean-slate-lint": "1.0.9"
+    "clean-slate-lint": "1.0.9",
+    "eslint": "6.7.2"
+  },
+  "dependencies": {
+    "rimraf": "3.0.0",
+    "vsce": "1.71.0"
+  },
+  "__metadata": {
+    "id": "22a2ca09-9373-445d-b109-9219dd118b4c",
+    "publisherDisplayName": "Sangam Kumar",
+    "publisherId": "3922c4df-7d82-4353-900b-316e8d3e1514"
   }
 }
