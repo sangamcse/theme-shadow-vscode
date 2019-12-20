@@ -4,6 +4,7 @@ All notable changes to the "theme-shadow-vscode" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [0.0.2] - 2019-12-21
 
+- Deploy with GitHub Action
 - Initial structure of Theme Shadow
