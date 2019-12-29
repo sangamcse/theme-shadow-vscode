@@ -1,8 +1,14 @@
 .vscode/**
 .vscode-test/**
+
 .gitignore
-vsc-extension-quickstart.md
 .github/**
 .git/**
+
 node_modules/**
 **.log
+
+themes
+!bin/shadow_color_theme.json
+
+.editorconfig
