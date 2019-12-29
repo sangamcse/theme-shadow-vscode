@@ -2,15 +2,16 @@
   "name": "theme-shadow-vscode",
   "displayName": "Theme Shadow",
   "description": "Don't look to escape from darkness, learn to live there.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "sangamcse",
   "engines": {
     "vscode": "1.41.0"
   },
   "scripts": {
-    "vs:pack": "vsce package --yarn",
-    "vs:publish": "vsce publish --yarn",
-    "vs:deploy": "yarn vs:rm && yarn vs:pack && yarn vs:publish",
+    "build": "node --experimental-modules themes/index.mjs",
+    "vs:pack": "yarn build && vsce package --yarn",
+    "vs:publish": "yarn build && vsce publish --yarn",
+    "vs:deploy": "yarn vs:rm && yarn vs:publish",
     "vs:rm": "rimraf **.vsix"
   },
   "repository": {
@@ -26,7 +27,7 @@
       {
         "label": "Theme Shadow",
         "uiTheme": "vs-dark",
-        "path": "./themes/shadow-color-theme.json"
+        "path": "./bin/shadow_color_theme.json"
       }
     ]
   },
